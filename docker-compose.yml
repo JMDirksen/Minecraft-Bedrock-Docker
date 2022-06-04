@@ -1,0 +1,17 @@
+services:
+  server:
+    image: jmdirksen/minecraft-bedrock
+    container_name: minecraft-bedrock
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    ports:
+      - 19132:19132
+    volumes:
+      - ./minecraft:/minecraft
+    environment:
+      - server_name=Example Minecraft Server
+      - difficulty=easy
+      - level_seed=
+      - max_players=10
+      - player_idle_timeout=30
