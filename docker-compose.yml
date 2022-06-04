@@ -6,7 +6,7 @@ services:
     stdin_open: true
     tty: true
     ports:
-      - 19132:19132
+      - 19132:19132/udp
     volumes:
       - ./minecraft:/minecraft
     environment:
