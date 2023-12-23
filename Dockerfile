@@ -45,5 +45,6 @@ ENV server_build_radius_ratio=Disabled
 ENV allow_outbound_script_debugging=false
 ENV allow_inbound_script_debugging=false
 ENV script_debugger_auto_attach=disabled
+ENV emit_server_telemetry=false
 
 CMD ./run.sh

@@ -39,6 +39,7 @@ main () {
   echo "allow-outbound-script-debugging=${allow_outbound_script_debugging}" >> server/server.properties
   echo "allow-inbound-script-debugging=${allow_inbound_script_debugging}" >> server/server.properties
   echo "script-debugger-auto-attach=${script_debugger_auto_attach}" >> server/server.properties
+  echo "emit-server-telemetry=${emit_server_telemetry}" >> server/server.properties
 
   # Get current version
   [ -f "version" ] && current_version=$(cat "version") || current_version=0
