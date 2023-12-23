@@ -1,14 +1,13 @@
 services:
-  server:
+  minecraftbedrock:
     image: jmdirksen/minecraft-bedrock
-    container_name: minecraft-bedrock
     restart: unless-stopped
     stdin_open: true
     tty: true
     ports:
       - 19132:19132/udp
     volumes:
-      - ./minecraft:/minecraft
+      - /data/minecraftbedrock:/data/server
     environment:
       - server_name=Example Minecraft Server
       - difficulty=easy
