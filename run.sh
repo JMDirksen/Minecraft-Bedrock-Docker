@@ -16,10 +16,13 @@ main () {
   # Update if not up-to-date
   [ $current_version != $latest_version ] && update
 
+  # Stop/update/restart server after about 24 hours
+  (sleep 86000; screen -S mc -X stuff "stop\n") &
+
   # Starting server
   echo "Starting server..."
   cd server
-  LD_LIBRARY_PATH=. ./bedrock_server
+  screen -S mc ./bedrock_server
 }
 
 update () {
