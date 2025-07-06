@@ -16,8 +16,8 @@ main () {
   # Update if not up-to-date
   [ $current_version != $latest_version ] && update
 
-  # Stop/update/restart server after about 24 hours
-  (sleep 86000; screen -S mc -X stuff "stop\n") &
+  # Run updater in background
+  ./update.sh &
 
   # Starting server
   echo "Starting server..."

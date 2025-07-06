@@ -4,6 +4,7 @@ EXPOSE 19132/udp
 VOLUME /data/server
 WORKDIR /data
 COPY --chmod=700 run.sh .
+COPY --chmod=700 update.sh .
 ENV LD_LIBRARY_PATH=.
 
 # server.properties settings
